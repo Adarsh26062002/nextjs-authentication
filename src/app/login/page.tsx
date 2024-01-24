@@ -21,7 +21,7 @@ const Login = (props: Props) => {
             setLoading(true)
             const res = await axios.post('/api/users/login', user)
             console.log("Login success",res.data)
-            router.push('/')
+            router.push('/profile')
         } catch (error:any) {
             console.log("Login failed", error.message);
             toast.error(error.message);
